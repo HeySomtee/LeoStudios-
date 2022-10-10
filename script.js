@@ -221,7 +221,11 @@ function sC() {
     style_.style.animationName = 'example'
 }
 
-
+function dom(){
+    const fill = document.getElementById('dropdoen-content');
+    fill.style.display = 'none'
+}
+addEventListener('click', dom)
 
 
 // float()

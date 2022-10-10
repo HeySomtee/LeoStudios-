@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kings&family=Peralta&family=Silkscreen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Kings&family=Peralta&family=Silkscreen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+
 *{
     scroll-behavior: smooth;
 }
@@ -265,6 +267,9 @@ h1, h2, h3{
     width: 200px;
 }
 
+#spanName{
+    display: none;
+}
 
 
 
@@ -294,12 +299,19 @@ h1, h2, h3{
   @media screen and (max-width: 550px) {
     
     body{
+        /* position: fixed; */
         width: 100vw;
         font-size: 10px;
-        /* overflow: scroll; */
+        /* overflow-x: hidden; */
         box-sizing: border-box;
         text-align: center;
+        background-color: rgb(206, 88, 88);
     }  
+    #over{
+        /* width: 400px; */
+        /* background-color: brown; */
+        /* overflow-x: hidden; */
+    }
     a{
         color: azure;
     } 
@@ -309,6 +321,10 @@ h1, h2, h3{
 
     .octo, .octo1{
         display: block;
+        
+    }
+    #oc{
+        text-align: center;
     }
 
     .octo, .octo1 span{
@@ -333,16 +349,17 @@ h1, h2, h3{
         display: block;
 
     }
-    #demo{
-        /* float: right; */
-        /* display: none; */
+    /* #demo{
+        float: right;
+        display: none;
     }
     #redirect{
-        /* display: none; */
-    }
+        display: none;
+    } */
     img{
         width: 0px;
     }
+    
 
     .octo0{
         display: none;
@@ -353,14 +370,19 @@ h1, h2, h3{
     }
 
     #container1{
-        margin-left: 0%;
+        margin-left: 10%;
         overflow-x: hidden;
         width: 90%;
     }
+    #container1 img{
+        margin-left: 0px;
+    }
     .dropdown{
+        /* display: block; */
         float: right;
         position: absolute;
         margin-left: 100px;
+        /* overflow-x: hidden; */
         
     }
     .dropdown-content{
@@ -370,7 +392,7 @@ h1, h2, h3{
 
     #content{
         margin-left: px;
-        max-width: 390px;
+        min-width: 400px;
         padding-left: 10px;
         padding-right: 10px;
         line-height: 1.6;
@@ -391,6 +413,8 @@ h1, h2, h3{
         position: absolute;
     }
 
+ 
+
     .eth{
         clear: both;
         margin-right: 90px;
@@ -407,6 +431,7 @@ h1, h2, h3{
         float: right;
         margin-top: 550px;
         margin-left: 280px;
+    
     }
     #soc_icons{
         display: none;
@@ -454,5 +479,126 @@ h1, h2, h3{
         position: absolute;
         margin-top: -20px;
         margin-left: 40px;
+    }
+    #spanName{
+        display: block;
+    }
+    @-webkit-keyframes ex {
+        0%   { left:100px; top:0px}
+        25%  { left:-00px; top:-00px;}
+        /* 50%  {background-color:blue; left:-200px; top:-100px;} */
+        /* 75%  {background-color:green; left:-200px; top:-200px;} */
+        100% { left: 00px; top:-100px;}
+    }
+    .glow {
+        font-size: 80px;
+        color: #fff;
+        text-align: center;
+        -webkit-animation: glow 0.6s ease-in-out infinite alternate;
+        -moz-animation: glow 0.6s ease-in-out infinite alternate;
+        animation: glow 0.6s ease-in-out infinite alternate;
+      }
+      
+      @-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+          opacity: 0.6;
+        }
+        to {
+          text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+        }
+      }
+
+    #control{
+        height: 20px;
+        position: absolute;
+        right: -30px;
+        display: block;
+        /* display: block; */
+        animation-name: ex;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        margin-top: 100px;
+    }
+    #control img{
+        padding: 0%;
+        position: absolute;
+        float: right;
+        margin-left: 0px;
+    }
+
+    #redirect{
+        position: absolute; 
+        width: 80px; 
+        margin-left: -50px; 
+        border-radius: 50%; 
+        margin-top: 500px; 
+        opacity: 0.8;
+    }
+    #arr-key{
+        font-size: 50px; 
+        color: gold;
+        margin-left: 50px;
+        animation-name: blin;
+        animation-duration: 01s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes blin{
+        0% {opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+    #demo{
+        margin-left: -60px;
+    }
+    #fa{
+        z-index: 5;
+        color: aliceblue;
+    }
+
+    #title{
+        font-family: 'Passions Conflict', cursive;
+        float: left;
+        font-size: 60px;
+        position: absolute;
+        margin-top: -60px;
+        color: aliceblue;
+        padding: 10px;
+        /* display: none; */
+    }
+}
+@media screen and (max-width: 500px){
+    #control img{
+        padding: 0%;
+        position: absolute;
+        float: right;
+        margin-left: -20px;
+    }
+    #arr-key{
+        font-size: 50px; 
+        /* color: red; */
+        margin-left: 65px;
+    }
+}
+@media screen and (max-width: 600px){
+    #arr-key{
+        font-size: 50px; 
+        /* color: red; */
+        margin-left: 85px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #control img{
+        padding: 0%;
+        position: absolute;
+        float: right;
+        margin-left: -40px;
+    }
+
+    #arr-key{
+        font-size: 50px; 
+        /* color: red; */
+        margin-left: 50px;
     }
 }
